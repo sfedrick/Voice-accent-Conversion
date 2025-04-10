@@ -1,0 +1,36 @@
+name: cs7643-fac
+channels:
+  - defaults
+  - huggingface
+  - conda-forge
+dependencies:
+  - python>=3.10
+  - numpy
+  - pandas
+  - scipy
+  - scikit-learn
+  - pyyaml
+  - matplotlib
+  - jupyter
+  - pytest
+  - tqdm
+  - tensorboard
+  - librosa
+  - fairseq
+  - pyarrow
+  - pip
+  - pip:
+    - huggingface_hub
+    - huggingface_hub[cli]
+    - huggingface_hub[torch]
+    - torch
+    - torchvision
+    - torchaudio
+    - tensorboardX
+    - transformers
+    - datasets
+    - datasets[audio]
+    - soundfile
+    - sounddevice
+    - wavenet_vocoder
+    - webrtcvad
