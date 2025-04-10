@@ -1,0 +1,42 @@
+[project]
+name = "voice-accent-conversion"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "jupyter>=1.1.1",
+    "matplotlib>=3.10.1",
+    "notebook>=7.3.2",
+    "numpy>=2.2.3",
+    "torch>=2.6.0",
+    "tqdm>=4.67.1",
+    "torchvision>=0.20",
+    "pytorch-fid>=0.3.0",
+    "pandas>=2.2.3",
+    "scipy>=1.15.2",
+    "scikit-learn>=1.6.1",
+    "pyyaml>=6.0.2",
+    "pytest>=8.3.5",
+    "tensorboard>=2.19.0",
+    "librosa>=0.11.0",
+    "fairseq>=0.12.2",
+    "pyarrow>=19.0.1",
+    "pip>=25.0.1",
+]
+
+[dependency-groups]
+dev = ["ipykernel>=6.29.0"]
+
+[tool.uv.sources]
+torch = [
+  { index = "pytorch-cu124", marker = "sys_platform == 'linux' or sys_platform == 'win32'" },
+]
+torchvision = [
+  { index = "pytorch-cu124", marker = "sys_platform == 'linux' or sys_platform == 'win32'" },
+]
+
+[[tool.uv.index]]
+name = "pytorch-cu124"
+url = "https://download.pytorch.org/whl/cu124"
+explicit = true
